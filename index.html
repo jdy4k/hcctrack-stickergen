@@ -7,18 +7,32 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <h1>HCC Sticker Sheet Generator</h1>
-    <p>
-      Upload a CSV with columns
-      <code>name,group,sex,event,heat</code>.
-    </p>
-    <p>
-      <input id="file-input" type="file" accept=".csv,text/csv" />
-      <button id="generate-btn" type="button" disabled>Generate PDF</button>
-    </p>
-    <p id="status"></p>
-    <p><a id="download-link" download="stickers.pdf" hidden>Download PDF</a></p>
-    <pre id="log" hidden></pre>
+    <main>
+      <h1>HCC Sticker Sheet Generator</h1>
+      <p>
+        Upload a CSV with columns
+        <code>name,group,sex,event,heat</code>
+        and this site will give you a sticker sheet PDF for Avery 5160 labels. (<a href="docs/sample.csv">sample csv</a>)
+      <p>
+
+      <p>The file should end with <code>.csv</code>. (not <code>.xlsx</code>, <code>.xls</code>, or anything else!)
+      Learn how to export from Excel as a CSV file <a href="https://www.exceldemy.com/learn-excel/export-data/csv/">here</a>.
+      Learn how to export from Google Sheets as a CSV file <a href="https://excelinsider.com/google-sheets-basics/worksheets/save-as-csv/">here</a>.
+      </p>
+
+        <input id="file-input" type="file" accept=".csv,text/csv" />
+        <button id="generate-btn" type="button" disabled>Generate PDF</button>
+      </p>
+      <p id="status"></p>
+      <p><a id="download-link" download="stickers.pdf" hidden>Download PDF</a></p>
+      <pre id="log" hidden></pre>
+    </main>
+
+    <footer>
+      <a href="https://github.com/jdy4k/hcctrack-stickergen">Source on GitHub</a>
+      <p>Powered by <a href="https://github.com/SwiftLaTeX/SwiftLaTeX">SwiftLaTeX</a></p>
+      <p>Jack Hosler 2026</p>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/papaparse@5.5.3/papaparse.min.js"></script>
     <script src="assets/vendor/swiftlatex/PdfTeXEngine.js"></script>
