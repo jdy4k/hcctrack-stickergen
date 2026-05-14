@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HCC Sticker Sheet Generator</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <h1>HCC Sticker Sheet Generator</h1>
+    <p>
+      Upload a CSV with columns
+      <code>name,group,sex,event,heat</code>.
+    </p>
+    <p>
+      <input id="file-input" type="file" accept=".csv,text/csv" />
+      <button id="generate-btn" type="button" disabled>Generate PDF</button>
+    </p>
+    <p id="status"></p>
+    <p><a id="download-link" download="stickers.pdf" hidden>Download PDF</a></p>
+    <pre id="log" hidden></pre>
+
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.5.3/papaparse.min.js"></script>
+    <script src="assets/vendor/swiftlatex/PdfTeXEngine.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

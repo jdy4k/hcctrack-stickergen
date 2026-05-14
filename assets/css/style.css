@@ -1,0 +1,15 @@
+body {
+  font-family: system-ui, sans-serif;
+  max-width: 40rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+pre {
+  overflow: auto;
+  max-height: 20rem;
+}
+
+.error {
+  color: #b00020;
+}
