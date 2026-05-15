@@ -16,37 +16,13 @@ const docHead = `
 
 \\setlength{\\parindent}{0pt}
 
-\\newsavebox{\\mybox}
-\\newcommand{\\smartfont}[1]{%
-	\\sbox{\\mybox}{#1}
-	
-	\\ifdim\\wd\\mybox > 5cm
-	{\\small #1}%
-	
-	\\else
-	
-		\\ifdim\\wd\\mybox > 4.5cm
-		{\\normalsize #1}%
-	
-		\\else
-	
-			\\ifdim\\wd\\mybox > 4cm
-			{\\large #1}%
-		
-			\\else
-			#1%
-			\\fi
-		\\fi
-	\\fi
-}
-
 \\newcommand{\\makeEntry}[5]{%
     \\begin{minipage}[b][2.5cm][t]{6.66cm}
         \\offinterlineskip
   \t\t  \\vspace*{\\fill}
 \t\t    \\hspace*{\\fill}
         \\begin{tabular}{@{}p{4cm}@{}@{}p{2cm}@{}}
-            \\smartfont{#1} \\\\
+            #1 \\\\
             #2 & #3 \\\\
             #4 & #5 \\\\
         \\end{tabular}
