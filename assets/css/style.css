@@ -4,6 +4,7 @@ body {
   margin: 0 auto;
   padding: 1rem;
   min-height: 100vh;
+  line-height: 1.75;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -11,10 +12,26 @@ body {
 
 footer {
   margin-top: auto;
+  line-height: 0.5;
 }
 
 code {
-  font-size: 1.25em;
+  font-family: monospace;
+}
+
+p > code,
+li > code,
+dd > code,
+td > code {
+  background: #ffeff0;
+  word-wrap: break-word;
+  box-decoration-break: clone;
+  
+  font-size: 1.25em;   
+  padding: 0.1rem 0.3rem;      
+  vertical-align: baseline;    
+  position: relative;
+  top: -1px;                   
 }
 
 pre {
