@@ -20,17 +20,17 @@ const docHead = `
 \\newcommand{\\smartfont}[1]{%
 	\\sbox{\\mybox}{#1}
 	
-	\\ifdim\\wd\\mybox > 6cm
+	\\ifdim\\wd\\mybox > 5cm
 	{\\small #1}%
 	
 	\\else
 	
-		\\ifdim\\wd\\mybox > 5.5cm
+		\\ifdim\\wd\\mybox > 4.5cm
 		{\\newcommandlsize #1}%
 	
 		\\else
 	
-			\\ifdim\\wd\\mybox > 5cm
+			\\ifdim\\wd\\mybox > 4cm
 			{\\large #1}%
 		
 			\\else
