@@ -26,7 +26,7 @@ const docHead = `
 	\\else
 	
 		\\ifdim\\wd\\mybox > 4.5cm
-		{\\newcommandlsize #1}%
+		{\\normalsize #1}%
 	
 		\\else
 	
